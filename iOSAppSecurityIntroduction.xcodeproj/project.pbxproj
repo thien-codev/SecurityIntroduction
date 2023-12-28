@@ -8,22 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		A221FDE82B3A7832007B03E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A221FDE72B3A7832007B03E0 /* AppDelegate.swift */; };
-		A221FDEA2B3A7832007B03E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A221FDE92B3A7832007B03E0 /* SceneDelegate.swift */; };
 		A221FDEC2B3A7832007B03E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A221FDEB2B3A7832007B03E0 /* ViewController.swift */; };
 		A221FDEF2B3A7832007B03E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A221FDED2B3A7832007B03E0 /* Main.storyboard */; };
 		A221FDF12B3A7834007B03E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A221FDF02B3A7834007B03E0 /* Assets.xcassets */; };
 		A221FDF42B3A7834007B03E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A221FDF22B3A7834007B03E0 /* LaunchScreen.storyboard */; };
+		A2C583CB2B3AB46F00F5061E /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C583CA2B3AB46F00F5061E /* UITextField+Extensions.swift */; };
+		A2C583CD2B3AD82600F5061E /* KeychainFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C583CC2B3AD82600F5061E /* KeychainFacade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A221FDE42B3A7832007B03E0 /* iOSAppSecurityIntroduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAppSecurityIntroduction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A221FDE72B3A7832007B03E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A221FDE92B3A7832007B03E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A221FDEB2B3A7832007B03E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A221FDEE2B3A7832007B03E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A221FDF02B3A7834007B03E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A221FDF32B3A7834007B03E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A221FDF52B3A7834007B03E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A221FDFB2B3A7E5F007B03E0 /* iOSAppSecurityIntroduction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSAppSecurityIntroduction.entitlements; sourceTree = "<group>"; };
+		A2C583CA2B3AB46F00F5061E /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		A2C583CC2B3AD82600F5061E /* KeychainFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainFacade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +59,15 @@
 		A221FDE62B3A7832007B03E0 /* iOSAppSecurityIntroduction */ = {
 			isa = PBXGroup;
 			children = (
+				A221FDFB2B3A7E5F007B03E0 /* iOSAppSecurityIntroduction.entitlements */,
 				A221FDE72B3A7832007B03E0 /* AppDelegate.swift */,
-				A221FDE92B3A7832007B03E0 /* SceneDelegate.swift */,
 				A221FDEB2B3A7832007B03E0 /* ViewController.swift */,
+				A2C583CA2B3AB46F00F5061E /* UITextField+Extensions.swift */,
 				A221FDED2B3A7832007B03E0 /* Main.storyboard */,
 				A221FDF02B3A7834007B03E0 /* Assets.xcassets */,
 				A221FDF22B3A7834007B03E0 /* LaunchScreen.storyboard */,
 				A221FDF52B3A7834007B03E0 /* Info.plist */,
+				A2C583CC2B3AD82600F5061E /* KeychainFacade.swift */,
 			);
 			path = iOSAppSecurityIntroduction;
 			sourceTree = "<group>";
@@ -139,8 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A221FDEC2B3A7832007B03E0 /* ViewController.swift in Sources */,
+				A2C583CB2B3AB46F00F5061E /* UITextField+Extensions.swift in Sources */,
 				A221FDE82B3A7832007B03E0 /* AppDelegate.swift in Sources */,
-				A221FDEA2B3A7832007B03E0 /* SceneDelegate.swift in Sources */,
+				A2C583CD2B3AD82600F5061E /* KeychainFacade.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,16 +296,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOSAppSecurityIntroduction/iOSAppSecurityIntroduction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95XVN448CF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSAppSecurityIntroduction/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app needs to open by faceID";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "The app needs to access step count data to display statistics.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,16 +328,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOSAppSecurityIntroduction/iOSAppSecurityIntroduction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95XVN448CF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSAppSecurityIntroduction/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app needs to open by faceID";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "The app needs to access step count data to display statistics.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
